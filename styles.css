@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inter, sans-serif;
+
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-size: 14px;
+    background: linear-gradient(180deg, #f4f4f4 75%, var(--primary-950));
     line-height: 1.6;
     padding: 20px;
     display: flex;
@@ -51,14 +52,4 @@ div.painel button.reiniciar {
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    background-color: #f4cb35;
-    border: none;
-}
-
-div.painel button.reiniciar:hover {
-    background-color: #e6b72c;
 }

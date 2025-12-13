@@ -1,29 +1,80 @@
-.primary-btn{
-    display: flex;
-        height: 48px;
-        padding: 12px 24px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex: 1 0 0;
-        border: none;
-
-        border-radius: 20px;
-            background: #00349C;
-            box-shadow: 0 -1px 2px 1px rgba(0, 26, 77, 0.60) inset, 0 2px 4px 1px rgba(128, 170, 255, 0.75) inset, 0 2px 2px 0 rgba(5, 28, 74, 0.30);
+:root {
+    --primary-950: #c4e9ff;
+    --primary-900: #89c9f3;
+    --primary-800: #71baea;
+    --primary-700: #5caee4;
+    --primary-600: #479acf;
+    --primary-500: #2987c5;
+    --primary-400: #2271a6;
+    --primary-300: #185985;
 }
 
-.secondary-btn {
+h1, h2, h3, h4, h5, h6 {
+    font-family: "JetBrains Mono", "Inter Semi Bold", sans-serif;
+}
+
+
+.btn {
+    display: flex;
+    height: 48px;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border: none;
+
+    border-radius: 20px;
+    background: #00349C;
+    box-shadow: 0 -1px 2px 1px rgba(0, 26, 77, 0.60) inset, 0 2px 4px 1px rgba(128, 170, 255, 0.75) inset, 0 2px 2px 0 rgba(5, 28, 74, 0.30);
+}
+
+.btn:active {
+    animation: squash 100ms linear forwards;
+    box-shadow: none;
+    transition: all ease-in-out 100ms;
+    background: var(--primary-600);
+}
+
+@keyframes squash {
+    0% {
+        scale: 0.97;
+        transition: cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+    }
+    100% {
+        scale: 0.97;
+    }
+}
+
+.surface-tinted {
+    border: none;
+    min-height: 10px;
+    color: white;
+
+    border-radius: 20px;
+    background: var(--primary-500);
+    box-shadow: 0 -1px 2px 1px rgba(21, 20, 20, 0.6) inset, 0 2px 4px 1px rgba(255, 255, 255, 0.5) inset, 0 2px 2px 0 rgba(191, 191, 191, 0.30);
+}
+
+.rotatingSVG {
+    animation: rotateSVG 500ms linear forwards;
+}
+
+@keyframes rotateSVG {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.surface-neutral {
     border: none;
     display: flex;
-        height: 48px;
-        padding: 12px 24px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex: 1 0 0;
+    min-height: 10px;
 
-        border-radius: 20px;
-            background: #F2F2F2;
-            box-shadow: 0 -1px 2px 1px rgba(181, 181, 181, 0.60) inset, 0 2px 4px 1px #FFF inset, 0 2px 2px 0 rgba(191, 191, 191, 0.30);
+    border-radius: 20px;
+    background: #f2f2f2;
+    box-shadow: 0 -1px 2px 1px rgba(181, 181, 181, 0.60) inset, 0 2px 4px 1px #FFF inset, 0 2px 2px 0 rgba(191, 191, 191, 0.30);
 }
