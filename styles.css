@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section.grid-container {
+    min-width: 150px;
+    width: 70dvw;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    grid-template-rows: repeat(3, minmax(50px, 1fr));
+    border-radius: 24px;
+    overflow: hidden;
+    outline: #f4f4f4 4px solid;
+    outline-offset: -1px;
+}
+
+div.grid-cell {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.grid-cell:hover {
+    background-color: #f2f2f2;
+}
+
+div.painel {
+    margin-top: 20px;
+}
+
+div.painel button.reiniciar {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #f4cb35;
+    border: none;
+}
+
+div.painel button.reiniciar:hover {
+    background-color: #e6b72c;
+}

@@ -1,0 +1,29 @@
+.primary-btn{
+    display: flex;
+        height: 48px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 1 0 0;
+        border: none;
+
+        border-radius: 20px;
+            background: #00349C;
+            box-shadow: 0 -1px 2px 1px rgba(0, 26, 77, 0.60) inset, 0 2px 4px 1px rgba(128, 170, 255, 0.75) inset, 0 2px 2px 0 rgba(5, 28, 74, 0.30);
+}
+
+.secondary-btn {
+    border: none;
+    display: flex;
+        height: 48px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 1 0 0;
+
+        border-radius: 20px;
+            background: #F2F2F2;
+            box-shadow: 0 -1px 2px 1px rgba(181, 181, 181, 0.60) inset, 0 2px 4px 1px #FFF inset, 0 2px 2px 0 rgba(191, 191, 191, 0.30);
+}
