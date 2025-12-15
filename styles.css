@@ -1,55 +1,80 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Inter, sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
 body {
-    font-size: 14px;
-    background: linear-gradient(180deg, #f4f4f4 75%, var(--primary-950));
-    line-height: 1.6;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-size: 14px;
+  background: linear-gradient(180deg, #f4f4f4 75%, var(--primary-950));
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 section.grid-container {
-    min-width: 150px;
-    width: 70dvw;
-    max-width: 500px;
-    aspect-ratio: 1 / 1;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(50px, 1fr));
-    grid-template-rows: repeat(3, minmax(50px, 1fr));
-    border-radius: 24px;
-    overflow: hidden;
-    outline: #f4f4f4 4px solid;
-    outline-offset: -1px;
+  min-width: 150px;
+  width: 70dvw;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  grid-template-rows: repeat(3, minmax(50px, 1fr));
+  border-radius: 24px;
+  overflow: hidden;
+  outline: #f4f4f4 4px solid;
+  outline-offset: -1px;
 }
 
 div.grid-cell {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--primary-500);
+  user-select: none;
 }
 
 div.grid-cell:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
+}
+
+div.grid-cell.marked {
+  cursor: not-allowed;
+}
+
+div.grid-cell.highlight-winning {
+  background-color: #c4e9ff;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 div.painel {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 div.painel button.reiniciar {
-    padding: 12px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
 }
