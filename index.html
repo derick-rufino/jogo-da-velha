@@ -7,7 +7,6 @@
     <title>Jogo da Velha</title>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="utilities.css">
 </head>
 
 <body>
@@ -16,18 +15,57 @@
 </header>
 <main>
     <section class="grid-container">
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
-        <div class="grid-cell" id=""></div>
+        <div class="grid-cell" id="cell-1">
+            <img alt="X" src="X.svg">
+
+        </div>
+        <div class="grid-cell" id="cell-2">
+            <img alt="O" src="O.svg">
+        </div>
+        <div class="grid-cell" id="cell-3"></div>
+        <div class="grid-cell" id="cell-4"></div>
+        <div class="grid-cell" id="cell-5"></div>
+        <div class="grid-cell" id="cell-6"></div>
+        <div class="grid-cell" id="cell-7"></div>
+        <div class="grid-cell" id="cell-8"></div>
+        <div class="grid-cell" id="cell-9"></div>
     </section>
-    <div class="painel">
-        <p>Vez do<span id="vez-jogador"></span></p>
+    <div class="painel surface-neutral">
+        <div class="indicador">
+
+            <p>Rodada de:</p>
+            <span id="vez-jogador"><svg fill="none" height="24" viewBox="0 0 36 36"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ii_46_189)">
+<path clip-rule="evenodd"
+      d="M16.3873 12.5C17.2157 13.3284 18.5589 13.3284 19.3873 12.5L29.3552 2.53213C30.5397 1.34757 32.4603 1.34757 33.6448 2.53212C34.8109 3.69816 34.8317 5.58214 33.6918 6.77372L24.3873 16.5C23.5348 17.4903 23.5684 18.9647 24.4651 19.9152L33.4714 29.4623C34.6012 30.6599 34.5738 32.5389 33.4096 33.7031C32.2209 34.8918 30.2938 34.8918 29.1051 33.7031L19.3947 23.9927C18.5634 23.1613 17.2145 23.1646 16.3873 24L6.75192 33.6233C5.57977 34.794 3.68071 34.7934 2.50928 33.622C1.33734 32.45 1.33734 30.55 2.50928 29.378L12.3873 19.5C13.0817 18.8056 13.0817 17.6797 12.3873 16.9853L2.26598 6.86396C1.09441 5.69239 1.09441 3.79289 2.26598 2.62132C3.43755 1.44975 5.33705 1.44975 6.50862 2.62132L16.3873 12.5Z"
+      fill="currentColor"
+      fill-rule="evenodd"/>
+</g>
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="34.9507" id="filter0_ii_46_189"
+        width="35.1459" x="0.387299"
+        y="0.643799">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"/>
+<feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dx="-1" dy="-1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.400962 0 0 0 0 0.400962 0 0 0 0 0.400962 0 0 0 0.5 0"/>
+<feBlend in2="shape" mode="normal" result="effect1_innerShadow_46_189"/>
+<feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dx="1" dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.926923 0 0 0 0 0.926923 0 0 0 0 0.926923 0 0 0 0.8 0"/>
+<feBlend in2="effect1_innerShadow_46_189" mode="normal" result="effect2_innerShadow_46_189"/>
+</filter>
+</defs>
+</svg>
+</span>
+        </div>
         <button class="btn surface-tinted reiniciar" id="btn-reiniciar">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -39,8 +77,8 @@
             Reiniciar
         </button>
     </div>
-    <div class="surface-neutral"></div>
-    <div class="surface-tinted"></div>
+    <!--    <div class="surface-neutral"></div>-->
+    <!--    <div class="surface-tinted"></div>-->
 </main>
 <script src="script.js"></script>
 </body>
